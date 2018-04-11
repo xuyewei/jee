@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Date对象</title>
+<script language="javascript">
+
+function disDate(oDate,iDate){
+    var ms=oDate.getTime();
+    ms-=iDate*24*60*60* 1000;
+    return new Date(ms);
+}
+
+var oBeijing=new Date(2008,7,8);
+var iNum=100;
+var oMyDate=disDate(oBeijing,iNum);
+
+document.write(oMyDate.getFullYear()+"年"+oMyDate.getMonth()+"月"+oMyDate.getDate()+"日"+"距离"+oBeijing.getFullYear()+"年"+oBeijing.getMonth()+"月"+oBeijing.getDate()+"日为"+iNum+"天");
+
+</script>
+</head>
+</html>
